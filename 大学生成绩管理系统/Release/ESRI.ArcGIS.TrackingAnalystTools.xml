@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ESRI.ArcGIS.TrackingAnalystTools</name>
+    </assembly>
+    <members>
+        <member name="T:ESRI.ArcGIS.TrackingAnalystTools.ConcatenateDateAndTimeFields">
+            <summary>Concatenates two separate date and time fields in a feature class or layer into a single field containing both the date and time.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.TrackingAnalystTools.ConcatenateDateAndTimeFields.#ctor(System.Object,System.Object,System.Object,System.String)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="Feature_Class">The input feature class or layer. (In, Required)</param>
+            <param name="DateField">The  text field in the input feature layer that contains date values. (In, Required)</param>
+            <param name="TimeField">The  text field in the input feature layer that contains time values. (In, Required)</param>
+            <param name="OutputField">The name of the new concatenated date/time field to be created and added to the input feature layer. (In, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.ConcatenateDateAndTimeFields.Feature_Class">
+            <summary>The input feature class or layer. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.ConcatenateDateAndTimeFields.DateField">
+            <summary>The  text field in the input feature layer that contains date values. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.ConcatenateDateAndTimeFields.TimeField">
+            <summary>The  text field in the input feature layer that contains time values. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.ConcatenateDateAndTimeFields.OutputField">
+            <summary>The name of the new concatenated date/time field to be created and added to the input feature layer. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.ConcatenateDateAndTimeFields.OutputFeatureClass">
+            <summary>Output Feature Class (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.ConcatenateDateAndTimeFields.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.ConcatenateDateAndTimeFields.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.ConcatenateDateAndTimeFields.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.ConcatenateDateAndTimeFields.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.ConcatenateDateAndTimeFields.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.TrackingAnalystTools.MakeTrackingLayer">
+            <summary>This tool creates a tracking layer from a feature class or layer  containing temporal data.</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.TrackingAnalystTools.MakeTrackingLayer.#ctor(System.Object,System.Object,System.String,System.String,System.String,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="in_features">The input feature class or layer. (In, Required)</param>
+            <param name="out_layer">The name of the tracking layer to be created. The newly  created tracking layer can be used as input to any geoprocessing tool that accepts a feature layer as input. (Out, Required)</param>
+            <param name="time_zone">The time zone that the data in the input feature class was recorded in.   For a list of available time zones supported by your system, you can open the tool dialog box and expand this drop-down.  When you enter the time zone as a parameter, you must use a non-localized string representation of the appropriate Microsoft Time Zone ID,  and replace any spaces with underscore characters. For example, the appropriate string representation of the Pacific time zone in the United States is "Pacific_Standard_Time".  "NO_TIME_ZONE" can be used to specify no time zone for the output tracking layer. (In, Required)</param>
+            <param name="adjusted_for_dst"><summary>If you chose a time zone for your data, this parameter specifies whether the data values in the input time field were recorded with an adjustment for Daylight Saving Time.
+            (In, Required)</summary></param>
+            <param name="storage_policy">Determines the storage policy  for the output tracking layer. (In, Required)</param>
+            <param name="start_time_field">The field in the input feature class or layer that contains date and time information. This tool requires date and time information to be contained in the same field, and the data type of the field must  be  Short, Long, Float, Double, Text, or Date. (In, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.MakeTrackingLayer.in_features">
+            <summary>The input feature class or layer. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.MakeTrackingLayer.out_layer">
+            <summary>The name of the tracking layer to be created. The newly  created tracking layer can be used as input to any geoprocessing tool that accepts a feature layer as input. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.MakeTrackingLayer.time_zone">
+            <summary>The time zone that the data in the input feature class was recorded in.   For a list of available time zones supported by your system, you can open the tool dialog box and expand this drop-down.  When you enter the time zone as a parameter, you must use a non-localized string representation of the appropriate Microsoft Time Zone ID,  and replace any spaces with underscore characters. For example, the appropriate string representation of the Pacific time zone in the United States is "Pacific_Standard_Time".  "NO_TIME_ZONE" can be used to specify no time zone for the output tracking layer. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.MakeTrackingLayer.adjusted_for_dst">
+            <summary>If you chose a time zone for your data, this parameter specifies whether the data values in the input time field were recorded with an adjustment for Daylight Saving Time.
+            (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.MakeTrackingLayer.storage_policy">
+            <summary>Determines the storage policy  for the output tracking layer. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.MakeTrackingLayer.start_time_field">
+            <summary>The field in the input feature class or layer that contains date and time information. This tool requires date and time information to be contained in the same field, and the data type of the field must  be  Short, Long, Float, Double, Text, or Date. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.MakeTrackingLayer.time_field_format">
+            <summary> If the data type of the time field is anything other than Date, this parameter determines the format that will be used to interpret data values in the time field. Some examples of formats are: (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.MakeTrackingLayer.locale_id">
+            <summary>If the data type of the time field is Text, this parameter  determines which locale will be used to interpret data values in the time field.   For all  time field data types other than Text, this parameter is not needed. If no locale is entered, the current  locale of the operating system will be used.  For a list of available locales supported by your system, open the tool dialog box and expand this drop-down.  When entering the locale as a parameter, it is recommended to use only the  locale ID (LCID) assigned by Microsoft, which can be entered as a long integer such as 1033.  You can also enter the full string representation of the locale as a parameter, such as "01033-English_(United_States)", but you must replace spaces with underscore characters. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.MakeTrackingLayer.am_designator">
+            <summary>If the time field data type is Text and the time format is a 12-hour clock representation including a time marker ("t" or "tt"), then this parameter determines the character ("t") or characters ("tt") that designate AM in the time field data values. If nothing is entered, then the default AM designator for the selected locale will be used. For all  time field data types other than Text, this parameter is not needed. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.MakeTrackingLayer.pm_designator">
+            <summary>If the time field data type is Text and the time format is a 12-hour clock representation including a time marker ("t" or "tt"), then this parameter determines the character ("t") or characters ("tt") that designate PM in the time field data values. If nothing is entered, then the default PM designator for the selected locale will be used.  For all  time field data types other than Text, this parameter is not needed. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.MakeTrackingLayer.track_id_field">
+            <summary>The field that contains data values that will be used to group features into  tracks in the output tracking layer.  The data type of the field can be  Short, Long, Float, Double, Text, or OID. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.MakeTrackingLayer.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.MakeTrackingLayer.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.MakeTrackingLayer.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.MakeTrackingLayer.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.MakeTrackingLayer.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature">
+            <summary>Calculates values that are computed from the difference between successively ordered features in a track. New fields are added to the input feature class or layer to store the calculated values (distance, duration, speed, and course).</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.#ctor(System.Object,System.Object)">
+            <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+            <param name="in_features">The input feature class or layer. (In, Required)</param>
+            <param name="time_field">The field in the input feature class or layer that contains date and time information. This tool requires date and time information to be contained in the same field, and the data type of the field must  be  Short, Long, Float, Double, Text, or Date. (In, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.in_features">
+            <summary>The input feature class or layer. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.time_field">
+            <summary>The field in the input feature class or layer that contains date and time information. This tool requires date and time information to be contained in the same field, and the data type of the field must  be  Short, Long, Float, Double, Text, or Date. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.track_id_field">
+            <summary>The field that contains data values which are used to group the input features into  tracks.  The data type of the field can be  Short, Long, Float, Double, Text, or OID. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.calculation_method">
+             <summary>
+            Specifies which interval is used to calculate values for each feature. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.time_field_format">
+            <summary> If the data type of the time field is anything other than Date, this parameter determines the format that will be used to interpret data values in the time field. Some examples of formats are: (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.locale_id">
+            <summary>If the data type of the time field is Text, this parameter  determines which locale will be used to interpret data values in the time field.   For all  time field data types other than Text, this parameter is not needed. If no locale is entered, the current  locale of the operating system will be used.  For a list of available locales supported by your system, open the tool dialog box and expand this drop-down list.  When entering the locale as a parameter, it is recommended to use only the  locale ID (LCID) assigned by Microsoft, which can be entered as a long integer such as 1033.  You can also enter the full string representation of the locale as a parameter, such as "01033-English_(United_States)", but you must replace spaces with underscore characters. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.am_designator">
+            <summary>If the time field data type is Text and the time format is a 12-hour clock representation including a time marker ("t" or "tt"), then this parameter determines the character ("t") or characters ("tt") that designate AM in the time field data values. If nothing is entered, then the default AM designator for the selected locale will be used. For all  time field data types other than Text, this parameter is not needed. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.pm_designator">
+            <summary>If the time field data type is Text and the time format is a 12-hour clock representation including a time marker ("t" or "tt"), then this parameter determines the character ("t") or characters ("tt") that designate PM in the time field data values. If nothing is entered, then the default PM designator for the selected locale will be used.  For all  time field data types other than Text, this parameter is not needed. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.distance_field_units">
+             <summary>
+            Specifies the distance units that will be used in the output distance field. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.distance_field_name">
+             <summary>
+            Specifies the name of the distance field that will be added to the input 
+            feature class or layer. If no field name is specified, a name will automatically be chosen. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.duration_field_units">
+             <summary>
+            Specifies the time units that will be used in the output duration field. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.duration_field_name">
+             <summary>
+            Specifies the name of the duration field that will be added to the input 
+            feature class or layer. If no field name is specified, a name will automatically be chosen. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.speed_field_units">
+             <summary>
+            Specifies the speed units that will be used in the output speed field. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.speed_field_name">
+             <summary>
+            Specifies the name of the speed field that will be added to the input 
+            feature class or layer. If no field name is specified, a name will automatically be chosen. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.course_field_units">
+             <summary>
+            Specifies the course units that will be used in the output course field. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.course_field_name">
+             <summary>
+            Specifies the name of the course field that will be added to the input 
+            feature class or layer. If no field name is specified, a name will automatically be chosen. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.out_feature_class">
+            <summary>Output Feature Class (out, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToFeature.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine">
+            <summary>Calculates values that are computed from the difference between successively ordered features in a track. A new line feature class is created to represent the track intervals and store the calculated values (distance, duration, speed, and course).</summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.#ctor(System.Object,System.Object,System.Object)">
+             <summary>Constructor that takes all required parameters for geoprocessor execution.</summary>
+             <param name="in_features">The input feature class or layer. (In, Required)</param>
+             <param name="out_feature_class"><summary>
+            The output line feature class that will be created. (Out, Required)</summary></param>
+             <param name="time_field">The field in the input feature class or layer that contains date and time information. This tool requires date and time information to be contained in the same field, and the data type of the field must  be  short, long, float, double, text, or date. (In, Required)</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.in_features">
+            <summary>The input feature class or layer. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.out_feature_class">
+             <summary>
+            The output line feature class that will be created. (Out, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.time_field">
+            <summary>The field in the input feature class or layer that contains date and time information. This tool requires date and time information to be contained in the same field, and the data type of the field must  be  short, long, float, double, text, or date. (In, Required)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.track_id_field">
+            <summary>The field that contains data values that are used to group the input features into  tracks.  The data type of the field can be  short, long, float, double, text, or OID. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.time_field_format">
+            <summary> If the data type of the time field is anything other than date, this parameter determines the format that is used to interpret data values in the time field. Some examples of formats are as follows: (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.locale_id">
+            <summary>If the data type of the time field is text, this parameter  determines which locale is used to interpret data values in the time field.   For all  time field data types other than text, this parameter is not needed. If no locale is entered, the current  locale of the operating system is used.  For a list of available locales supported by your system, open the tool dialog box and expand this drop-down list.  When entering the locale as a parameter, it is recommended that you use only the  locale ID (LCID) assigned by Microsoft, which can be entered as a long integer such as 1033.  You can also enter the full string representation of the locale as a parameter, such as "01033-English_(United_States)", but you must replace spaces with underscore characters. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.am_designator">
+            <summary>If the time field data type is text and the time format is a 12-hour clock representation including a time marker (t or tt), this parameter determines the character (t) or characters (tt) that designate AM in the time field data values. If nothing is entered, the default AM designator for the selected locale is used. For all  time field data types other than text, this parameter is not needed. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.pm_designator">
+            <summary>If the time field data type is text and the time format is a 12-hour clock representation including a time marker (t or tt), this parameter determines the character (t) or characters (tt) that designate PM in the time field data values. If nothing is entered, the default PM designator for the selected locale is used.  For all  time field data types other than text, this parameter is not needed. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.distance_field_units">
+             <summary>
+            Specifies the distance units that will be used in the output distance field. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.distance_field_name">
+             <summary>
+            Specifies the name of the distance field that will be added to the input 
+            feature class or layer. If no field name is specified, a name is automatically chosen. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.duration_field_units">
+             <summary>
+            Specifies the time units that will be used in the output duration field. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.duration_field_name">
+             <summary>
+            Specifies the name of the duration field that will be added to the input 
+            feature class or layer. If no field name is specified, a name is automatically chosen. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.speed_field_units">
+             <summary>
+            Specifies the speed units that will be used in the output speed field. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.speed_field_name">
+             <summary>
+            Specifies the name of the speed field that will be added to the input 
+            feature class or layer. If no field name is specified, a name is automatically chosen. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.course_field_units">
+             <summary>
+            Specifies the course units that will be used in the output course field. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.course_field_name">
+             <summary>
+            Specifies the name of the course field that will be added to the input 
+            feature class or layer. If no field name is specified, a name is automatically chosen. (In, Optional)</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.ToolboxDirectory">
+            <summary>The directory of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.ToolboxName">
+            <summary>The name of this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.ToolName">
+            <summary>The name of this tool.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.Alias">
+            <summary>The alias for this tool's toolbox.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.TrackingAnalystTools.TrackIntervalsToLine.ParameterInfo">
+            <summary>The parameters used by this tool. For internal use only.</summary>
+        </member>
+    </members>
+</doc>
